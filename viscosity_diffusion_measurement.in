@@ -8,11 +8,12 @@ atom_style  full
 bond_style  harmonic
 dielectric  80.0
 
-read_data /grad/jtemple/josephetal22/fig6-RNA/viscosity/dense_phase.dat
+
+#read_data /grad/jtemple/josephetal22/fig6-RNA/viscosity/dense_phase.dat
 #read_restart restart
 
-shell mkdir -p /data/jtemple/viscosity_run1
-shell cd /data/jtemple/viscosity_run1
+#shell mkdir -p /data/jtemple/viscosity_run1
+#shell cd /data/jtemple/viscosity_run1
 
 set type 3  charge 0.75
 set type 23 charge 0.75

@@ -5,9 +5,9 @@ atom_style  full
 bond_style  harmonic
 dielectric  80.0
 
-read_restart /data/jtemple/viscosity_run1/equilibrated.restart
+read_restart /data/jtemple/viscosity_run4/equilibrated4.restart
 
-shell cd /data/jtemple/viscosity_run2
+shell cd /data/jtemple/viscosity_run5
 
 
 set type 3  charge 0.75
@@ -1142,7 +1142,7 @@ thermo        1000
 thermo_style  custom step pe press ke temp lx ly lz pxx pyy pzz spcpu density
 thermo_modify flush yes
 
-run 500000
+run 2000000
 
-write_data equilibrated2.dat
-write_restart equilibrated2.restart
+write_data equilibrated5.dat
+write_restart equilibrated5.restart
