@@ -74,14 +74,13 @@ def find_new_box_size(rho_arg, rho_lys, rho_rna, n_arg=50, m_arg = 156.2, m_lys 
 
 
 
-
-
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
+    profile_dir = os.path.join(script_dir, "josephetal22")
     species_files = {
-        "rna": os.path.join(script_dir, "rna.density.profile"),
-        "arg": os.path.join(script_dir, "arg.density.profile"),
-        "lys": os.path.join(script_dir, "lys.density.profile"),
+        "rna": os.path.join(profile_dir, "rna.density.profile"),
+        "arg": os.path.join(profile_dir, "arg.density.profile"),
+        "lys": os.path.join(profile_dir, "lys.density.profile"),
     }
 
     results = {}
@@ -123,7 +122,7 @@ def main():
 
     # write to file
     visc_path = os.path.dirname(script_dir)
-    write_to = os.path.join(visc_path, "viscosity/sim_params.txt")
+    write_to = os.path.join(visc_path, "sim_params.txt")
     with open(write_to, "w") as file:
         file.write(f"arg density (g/cm^3): {core_density['arg']} \n")
         file.write(f"lys density (g/cm^3): {core_density['lys']} \n")

@@ -49,10 +49,11 @@ def average_equilibrated(blocks, frac_discard=0.0):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
+    profiles_dir = os.path.join(script_dir, "josephetal22")
     species_files = {
-        "rna": os.path.join(script_dir, "rna.density.profile"),
-        "arg": os.path.join(script_dir, "arg.density.profile"),
-        "lys": os.path.join(script_dir, "lys.density.profile"),
+        "rna": os.path.join(profiles_dir, "rna.density.profile"),
+        "arg": os.path.join(profiles_dir, "arg.density.profile"),
+        "lys": os.path.join(profiles_dir, "lys.density.profile"),
     }
     colors = {"rna": "gold", "arg": "magenta", "lys": "green"}
 
@@ -72,6 +73,7 @@ def main():
     peak_coord = arg_coords[np.argmax(arg_dens)]
     shift = Lz / 2 - peak_coord
 
+    img_file = os.path.join(script_dir, "density_plot.png")
     plt.figure(figsize=(6, 4))
     for name in ["rna", "arg", "lys"]:
         coords, dens = results[name]
@@ -83,7 +85,7 @@ def main():
     plt.ylabel(r"Density / g cm$^{-3}$")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("density_plot.png", dpi=300)
+    plt.savefig(img_file, dpi=300)
     print("Saved density_plot.png")
 
 
