@@ -60,7 +60,7 @@ def save_csv(rows, columns, out_csv):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python run_equil.py /path/to/*")
+        print("Usage: python lammpslog_to_csv.py /path/to/*")
         sys.exit(1)
 
     logfile = sys.argv[1]
