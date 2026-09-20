@@ -1,0 +1,14 @@
+set type 3  charge 0.75
+set type 23 charge 0.75
+set type 5  charge 0.75
+set type 25 charge 0.75
+set type 16 charge 0.375
+set type 36 charge 0.375
+set type 7  charge -0.75
+set type 27 charge -0.75
+set type 8  charge -0.75
+set type 28 charge -0.75
+set type 41 charge -0.75
+set type 42 charge -0.75
+set type 43 charge -0.75
+set type 44 charge -0.75

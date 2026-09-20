@@ -49,7 +49,8 @@ def average_equilibrated(blocks, frac_discard=0.0):
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    profiles_dir = os.path.join(script_dir, "josephetal22")
+    parent_dir = os.path.dirname(script_dir)
+    profiles_dir = os.path.join(parent_dir, "josephetal22")
     species_files = {
         "rna": os.path.join(profiles_dir, "rna.density.profile"),
         "arg": os.path.join(profiles_dir, "arg.density.profile"),

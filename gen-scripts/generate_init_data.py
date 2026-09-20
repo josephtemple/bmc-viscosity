@@ -74,7 +74,8 @@ def main():
 
     # write to .dat file
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_file = os.path.join(script_dir, "dense_phase.dat")
+    parent_dir = os.path.dirname(script_dir)
+    input_file = os.path.join(parent_dir, "dense_phase.dat")
     with open(input_file, "w") as file:
         file.write(f"LAMMPS data file for condensate dense phase simulation\n\n")
         file.write(f"{total_num_atoms} atoms\n")

@@ -76,7 +76,8 @@ def find_new_box_size(rho_arg, rho_lys, rho_rna, n_arg=50, m_arg = 156.2, m_lys 
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    profile_dir = os.path.join(script_dir, "josephetal22")
+    parent_dir = os.path.dirname(script_dir)
+    profile_dir = os.path.join(parent_dir, "josephetal22")
     species_files = {
         "rna": os.path.join(profile_dir, "rna.density.profile"),
         "arg": os.path.join(profile_dir, "arg.density.profile"),
