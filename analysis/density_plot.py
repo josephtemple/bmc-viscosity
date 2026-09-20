@@ -2,7 +2,7 @@
 Recreate Fig. 6d (Joseph et al., Mpipi paper) from LAMMPS fix ave/chunk output.
 
 Expects arg.density.profile, lys.density.profile, rna.density.profile
-in the current directory (same format as your fix ave/chunk output).
+in the ../josephetal22 directory.
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,6 +48,11 @@ def average_equilibrated(blocks, frac_discard=0.0):
 
 
 def main():
+    plt.rcParams.update({
+        "font.family": "serif",
+        "mathtext.fontset": "stix"
+    })
+    
     script_dir = os.path.dirname(os.path.abspath(__file__))
     parent_dir = os.path.dirname(script_dir)
     profiles_dir = os.path.join(parent_dir, "josephetal22")
