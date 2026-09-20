@@ -1,0 +1,7 @@
+arg density (g/cm^3): 0.5309386778946927 
+lys density (g/cm^3): 0.012605690909941656 
+rna density (g/cm^3): 1.1618080437322842 
+sim box length (ang): 106.89119293174846
+num arg needed:       50
+num lys needed:       1
+num rna needed:       279

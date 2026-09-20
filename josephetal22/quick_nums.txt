@@ -1,0 +1,26 @@
+arg
+128 chains
+6400 beads (50 per chain)
+density in condensate (g/cm^3): 0.5309386778946927
+charge 0.75
+mass (g/mol) 156.2
+
+lys
+128 chains 
+6400 beads (50 per chain)
+density in condensate (g/cm^3): 0.012605690909941656
+charge 0.75
+mass (g/mol) 128.2
+
+rna
+1280 chains
+12800 beads (10 per chain)
+density in condensate (g/cm^3): 1.1618080437322842
+charge -0.75
+mass (g/mol) 306.2
+
+
+# notes on things
+masses don't match standard amino acid mass since the formation of peptides causes them to release
+a hydroxide group and a hydrogen, so molar mass here is ~18.02 g/mol (one water molecule) lighter 
+than free amino acid.
