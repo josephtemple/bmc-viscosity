@@ -22,7 +22,7 @@ def plot_thermo(df, out_png):
         "mathtext.fontset": "stix"
     })
 
-    steps = df['Step']
+    steps = df['Step'] / 1e5
 
     fig, axes = plt.subplots(3, 1, figsize=(7, 9), sharex=True)
 
@@ -40,7 +40,7 @@ def plot_thermo(df, out_png):
     axes[2].plot(steps, df['Pzz'], alpha=0.4, label="Pzz")
 
     axes[2].set_ylabel("Pressure (atm)")
-    axes[2].set_xlabel("Timestep (fs)")
+    axes[2].set_xlabel(r"Time (ns, 1 timestep = 10 fs)")
     axes[2].legend(fontsize=8)
 
     plt.tight_layout()

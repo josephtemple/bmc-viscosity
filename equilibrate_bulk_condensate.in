@@ -8,7 +8,8 @@ atom_style  full
 bond_style  harmonic
 dielectric  80.0
 
-read_data ../dense_phase.dat
+read_data ./dense_phase.dat
+#read_restart restart
 
 shell cd /data/jtemple/viscosity_run1
 
